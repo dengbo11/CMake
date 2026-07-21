@@ -1264,6 +1264,8 @@ add_library(
   CPack/cmCPackComponentGroup.cxx
   CPack/cmCPackDebGenerator.cxx
   CPack/cmCPackDebGenerator.h
+  CPack/cmCPackLinglongGenerator.cxx
+  CPack/cmCPackLinglongGenerator.h
   CPack/cmCPackExternalGenerator.cxx
   CPack/cmCPackExternalGenerator.h
   CPack/cmCPackGeneratorFactory.cxx

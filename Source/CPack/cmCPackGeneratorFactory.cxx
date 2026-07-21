@@ -11,6 +11,7 @@
 #endif
 #include "cmCPackArchiveGenerator.h"
 #include "cmCPackDebGenerator.h"
+#include "cmCPackLinglongGenerator.h"
 #include "cmCPackExternalGenerator.h"
 #include "cmCPackGenerator.h"
 #include "cmCPackInnoSetupGenerator.h"
@@ -141,6 +142,12 @@ cmCPackGeneratorFactory::cmCPackGeneratorFactory()
     this->RegisterGenerator("DEB", "Debian packages",
                             cmCPackDebGenerator::CreateGenerator);
   }
+#ifdef __linux__
+  if (cmCPackLinglongGenerator::CanGenerate()) {
+    this->RegisterGenerator("LINGLONG", "Linglong (linyaps) packages",
+                            cmCPackLinglongGenerator::CreateGenerator);
+  }
+#endif
   if (cmCPackNuGetGenerator::CanGenerate()) {
     this->RegisterGenerator("NuGet", "NuGet packages",
                             cmCPackNuGetGenerator::CreateGenerator);

@@ -24,6 +24,7 @@ Generators
    /cpack_gen/innosetup
    /cpack_gen/ifw
    /cpack_gen/nsis
+   /cpack_gen/linglong
    /cpack_gen/nuget
    /cpack_gen/packagemaker
    /cpack_gen/productbuild
